@@ -1,0 +1,27 @@
+﻿  @model Testimonial;
+
+ 
+                                             <div class="swiper-slide">
+                                  <div class="testimonial-item">
+                                    <div class="row gy-4 justify-content-center">
+                                      <div class="col-lg-6">
+                                        <div class="testimonial-content">
+                                          <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                            @Model.About
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                          </p>
+                                          <h3>@Model.FirstName @Model.LastName</h3>
+                                          <h4>Ceo &amp; Founder</h4>
+                                          <div class="stars">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-2 text-center">
+                                        <img src="@Model.Image" alt="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                

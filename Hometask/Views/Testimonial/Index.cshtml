@@ -1,0 +1,50 @@
+﻿        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>What Are They <span>Saying About Us</span></p>
+        </div>
+
+        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+         <a>
+              <div class="swiper-wrapper">
+
+            @foreach (Testimonial testimonial in Model)
+            {
+                                 <div class="swiper-slide">
+                              <a asp-controller="Testimonial" asp-action= "Details" asp-route-id ="@testimonial.Id" >
+                                             <div class="swiper-slide">
+                                  <div class="testimonial-item">
+                                    <div class="row gy-4 justify-content-center">
+                                      <div class="col-lg-6">
+                                        <div class="testimonial-content">
+                                          <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                                @testimonial.About
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                          </p>
+                                          <h3>@testimonial.FirstName @testimonial.LastName</h3>
+                                          <h4>Ceo &amp; Founder</h4>
+                                          <div class="stars">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-2 text-center">
+                                        <img src="@testimonial.Image" alt="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                    </a>
+                        </div>
+
+                            <!-- End testimonial item -->
+            }
+
+
+          </div>
+         </a>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
